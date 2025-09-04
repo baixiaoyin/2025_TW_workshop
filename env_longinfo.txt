@@ -1,0 +1,6 @@
+https://cpd-cpd-instance.apps.itz-7xdwed.infra01-lb.wdc07.techzone.ibm.com/
+
+username: tw_sept_user0x (from 01-04)
+
+password: passw0rd123
+

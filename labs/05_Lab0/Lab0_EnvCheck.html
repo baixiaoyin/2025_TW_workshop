@@ -1,0 +1,73 @@
+<h1>Lab 0 Enviroment Check</h1>
+<h2>What would you expect in this lab</h2>
+<ol>
+<li>Check access to IBM Cloud Pak for Data (CP4D) Platform Access</li>
+<li>Check access to watsonx.data UI</li>
+<li>Warmed up: Load a .csv file and test the query with Presto</li>
+<li>Generate an API key for next labs</li>
+</ol>
+<h2>Detailed steps</h2>
+<h3>Step 1: Check your access to IBM CP4D</h3>
+<p>Open the URL: https://cpd-cpd-instance.apps.itz-7xdwed.infra01-lb.wdc07.techzone.ibm.com/
+In the pull down list of the &quot;Log in with&quot; ==&gt; Select &quot;Enterprise LDAP&quot;</p>
+<p>In the Username, select the Username we assign to you in the csv</p>
+<p>The Password is passw0rd123</p>
+<img src="./images/cp4d_login.png" alt="alt text" width="1600">
+<p>If everthing is fine, you should see the login page as below</p>
+<img src="./images/cp4d_login_sucess.png" alt="alt text" width="1600">
+<p><br><br><br><br></p>
+<h3>Step 2: Check your access to IBM CP4D</h3>
+<p><span style="font-size:20px;">In the CP4D platform, go to the upper right cornor and click the &quot;9 dots&quot;.</span></p>
+<img src="./images/tocp4d1.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">And select &quot;IBM Cloud Pak for Data&quot;.</span>
+<img src="./images/tocp4d2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Then go to the upper left cornor and click the &quot;Hamburger&quot;.</span>
+<img src="./images/toInstance1.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">and click &quot;Instances&quot; under &quot;Services&quot;.</span>
+<img src="./images/toInstance2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">In the new open &quot;Service instances&quot; page, hover your mouse to the lakehouse and open it.</span></p>
+<img src="./images/openwxdata.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">Then you can see another page had been opened. Go to the left side bar, click the &quot;Infrastructure Manager&quot; and you could have a glance of the watsonx.data</span></p>
+<img src="./images/wxdataUI1.png" alt="alt text" width="1600">
+<p><br><br><br><br></p>
+<h3>Step 3: Warmed up: Load a .csv file and test the query with Presto</h3>
+<p><span style="font-size:20px;">Go to the left side bar, click the &quot;Data Manager&quot; and then click the &quot;Ingest Data&quot; on the right upper corner</span>
+<img src="./images/csvIngestion1.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Select &quot;Local System&quot;</span>
+<img src="./images/csvIngestion2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">In the right upper cornor, select &quot;Iceberg_data&quot;, and drag the csv into the box</span>
+<img src="./images/csvIngestion3.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Click &quot;Next&quot;</span>
+<img src="./images/csvIngestion4.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Select &quot;iceberg_data&quot; as catalog, &quot;test&quot; as schema==&gt;Create a new table with name [your_test_table_name, like xiaoyin]-test==&gt; click &quot;Preview&quot;</span>
+<img src="./images/csvIngestion5.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">You will see the data sample, click &quot;Ingest&quot;</span>
+<img src="./images/csvIngestion6.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">You will see an &quot;Finished&quot; Ingestion Job</span>
+<img src="./images/csvIngestion7.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Go to life side bar==&gt;Click &quot;Query workspace&quot;==&gt;Go to iceberg_data-&gt;test-&gt;table you created==&gt;click &quot;&lt;/&gt;&quot;==&gt; &quot;Generate Select&quot; ==&gt; &quot;Run on presto-small&quot;, you will see the sample data</span>
+<img src="./images/csvTest.png" alt="alt text" width="1600"></p>
+<h3>Step 4: Generate API keys for future labs</h3>
+<p><span style="font-size:20px;">In the CP4D platform, go to the upper right cornor and click the user icon and then click &quot;Profile and settings&quot;.</span></p>
+<img src="./images/API_gen1.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">Then &quot;API key&quot; ==&gt; &quot;Generate new key&quot;.</span>
+<img src="./images/API_gen2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Click &quot;Gnerate&quot;.</span>
+<img src="./images/API_gen3.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">Copy and store your API key somewhere, you will need it later!</span>
+<img src="./images/API_gen4.png" alt="alt text" width="1600"></p>

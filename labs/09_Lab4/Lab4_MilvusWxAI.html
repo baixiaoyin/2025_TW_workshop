@@ -1,0 +1,118 @@
+<h1>Lab4: Data platform for GenAI</h1>
+<h2><span style="font-size:26px;">What would you expect in this lab <span></h2>
+<p>Build your own Vector Database and working with IBM watsonx.AI</p>
+<ol>
+<li>Ingest PDFs into Milvus on watsonx.data.</li>
+<li>&quot;Talk&quot; to your PDFs (vectors in the Milvus)</li>
+</ol>
+<h2><span style="font-size:26px;">Detailed steps <span></h2>
+<h3><span style="font-size:24px;">Step 1: Set up your watsonx.AI <span></h3>
+ <span style="font-size:20px;">
+ Log in the watsonx.AI (URL, username and password would be in another file)
+<span>
+<img src="./images/wxailogin.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">
+Click the left top corner's &quot;Hamburger&quot; and go to &quot;Resource List&quot;
+<span>
+<img src="./images/resourceList.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Go to &quot;AI/Machine Learning&quot; and click the resource with Product of watsonx.Aai Runtime, please notice the Group as well
+<span>
+<img src="./images/resourceList2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+In the next page, go to &quot;Launch in&quot; pull down list and select &quot;IBM watsonx&quot;
+<span>
+<img src="./images/gotowxai.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+In the watsonx.AI, similar as for CP4D, go to left upper corner &quot;Hamburger&quot;--&gt;&quot;View all projects&quot;--&gt;&quot;New project&quot;
+<span>
+<img src="./images/creatProject1.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Give a project name and create it
+<span>
+<img src="./images/createProject2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Associate the watsonx.AI service: In the project, go to &quot;Manager&quot; --&gt; Associate Service
+<span>
+<img src="./images/associateService1.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Check the only service you could see and click &quot;Associate&quot;
+<span>
+<img src="./images/associateService2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Go to prompt lab
+<span>
+<img src="./images/openPromptLab.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Then start to test the chat function <br>
+You can change the LLM if you want
+<span>
+<img src="./images/chatTest.png" alt="alt text" width="1600"></p>
+<h3><span style="font-size:24px;">Step 2: Build Milvus Connection <span></h3>
+ <span style="font-size:20px;">
+In the chatting UI, go to right upper corner and click "Grounding with Documents" (you might need to clear the chat)
+<span>
+<img src="./images/milvus1.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">
+New vector index
+<span>
+<img src="./images/milvus2.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Select Milvus and create a new connection
+<span>
+<img src="./images/milvus3.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+!!Note, this step is at watsonx.data UI <br>
+Go to &quot;Infrastructure manager&quot;--&gt;Milvus <br>
+View Connection Details <br>
+Copy Json Snippet <br>
+Select Database as default and &quot;Copy to clipboard&quot; <br></p>
+<span>
+<img src="./images/milvus4.png" alt="alt text" width="1600">
+<img src="./images/milvus5.png" alt="alt text" width="1600">
+<img src="./images/milvus6.png" alt="alt text" width="1600">
+<img src="./images/milvus7.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">
+!!Note, go back to watsonx.AI UI <br>
+Enter Json Snippet <br>
+Paste and Enter <br>
+Enter username, password, test and create <br></p>
+<span>
+<img src="./images/milvus8.png" alt="alt text" width="1600">
+<img src="./images/milvus9.png" alt="alt text" width="1600">
+<img src="./images/milvus10.png" alt="alt text" width="1600">
+<p><br><br>
+<span style="font-size:20px;">
+Give an index name <br>
+Select database as default <br>
+Select an embedding model <br>
+Next <br>
+<span>
+<img src="./images/milvus11.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+New collection <br>
+Give a collection name--&gt;Select Chunk Size and Overlap size--&gt;Upload PDFs--&gt;Create <br>
+<span>
+<img src="./images/milvus12.png" alt="alt text" width="1600">
+<img src="./images/milvus13.png" alt="alt text" width="1600"></p>
+<p><br><br>
+<span style="font-size:20px;">
+Waiting until the index is ready <br>
+Test &quot;talking&quot; with Milvus<br>
+<span>
+<img src="./images/milvus14.png" alt="alt text" width="1600">
+<img src="./images/chatWithMilvus.png" alt="alt text" width="1600"></p>
