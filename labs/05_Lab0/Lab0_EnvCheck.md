@@ -14,7 +14,7 @@
 Open the URL: https://cpd-cpd-instance.apps.itz-7xdwed.infra01-lb.wdc07.techzone.ibm.com/
 In the pull down list of the "Log in with" ==> Select "Enterprise LDAP"
 
-In the Username, select the Username, should be tw_sept_user0x (from 01 to 04)
+In the Username, select the Username, should be tw_sept_user0x (from 05 to 08)
 
 The Password is passw0rd123
 
